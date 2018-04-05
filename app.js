@@ -50,7 +50,7 @@ app.get('/help', (req, res) => {
   const repoRegexp = /^(https?:\/\/([-\w]+)\.[a-z]+\.(io|dev))\/api(\/v2)?$/;
   const [_, repoURL, name, extension, apiVersion] = PrismicConfig.apiEndpoint.match(repoRegexp);
   const { host } = req.headers;
-  const isConfigured = name !== 'your-repo-name';
+  const isConfigured = name !== 'tatari';
   res.render('help', {
     isConfigured,
     repoURL,
